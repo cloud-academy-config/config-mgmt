@@ -1,0 +1,40 @@
+# aws kms dev info
+aws:
+  kms:
+    keyId: <INPUT_PROD_KMS_ID>
+    encryptionAlgorithm: "RSAES_OAEP_SHA_256"
+    region: ap-northeast-2
+
+# config server port
+server:
+  port: '8037'
+
+# actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "info"
+          - "health"
+
+
+spring:
+  application:
+    name: lguplus-common-config-server
+  config:
+    activate:
+      on-profile: prod, awss3
+  cloud:
+    config:
+      server:
+        awss3:
+          region: ap-northeast-2
+          bucket: s3-<INPUT_ENV>-<INPUT_SVC_NAME>-app-cfgstore/configuration/prod-config
+        encrypt:
+          enabled: false
+  # 예시 client / 1234
+  security:
+    user:
+      name: client
+      password: 1234 # 초기 비밀번호 신규 설정 후 복호화 값 입력 ex : '{cipher}awBWiE2I=......'
