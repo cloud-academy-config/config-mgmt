@@ -1,7 +1,7 @@
 # aws kms dev info
 aws:
   kms:
-    keyId: <INPUT_DEV_KMS_ID>
+    keyId: 0b56deb2-17d8-4624-9972-6a680cecabd1
     encryptionAlgorithm: "RSAES_OAEP_SHA_256"
     region: ap-northeast-2
 
@@ -29,7 +29,7 @@ spring:
       server:
         awss3:
           region: ap-northeast-2
-          bucket: s3-<INPUT_ENV>-<INPUT_SVC_NAME>-app-cfgstore/configuration/dev-config
+          bucket: s3-dev-cloud-academy-config-app-cfgstore/configuration/dev-config
         encrypt:
           enabled: false
   # 예시 client / 1234

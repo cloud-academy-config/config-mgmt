@@ -40,7 +40,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['<INPUT_LANGUAGE>']
+        language: ['java']
         # Repository 해당 개발 언어로 업데이트 필요 (Repository 내 존재하는 모든 개발 언어 포함)
 
     steps:

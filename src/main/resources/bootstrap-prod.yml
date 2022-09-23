@@ -30,7 +30,7 @@ spring:
       server:
         awss3:
           region: ap-northeast-2
-          bucket: s3-<INPUT_ENV>-<INPUT_SVC_NAME>-app-cfgstore/configuration/prod-config
+          bucket: s3-dev-cloud-academy-config-app-cfgstore/configuration/prod-config
         encrypt:
           enabled: false
   # 예시 client / 1234
